@@ -136,24 +136,43 @@ body{
   .sub { left:20px; font-size:26px; top:70px; }
   .date { right:20px; top:30px; padding:6px 10px; }
   
-  .card{ width:170px; }
-  .card.one{ left:20px; top:180px; }
-  .card.two{ left:120px; top:210px; }
-  .card.three{ left:220px; top:180px; }
-  
-  .card p{ font-size:16px; }
+  /* CENTER CARDS ON MOBILE */
+  .card{
+    position:relative;
+    width:150px;
+    margin: 0 10px;
+  }
+
+  .card.one, .card.two, .card.three{
+    top:auto;
+    left:auto;
+    transform: rotate(0deg);
+  }
+
+  body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .cards-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-top:170px;
+  }
 }
 
 @media (max-width: 480px) {
   .heading { left:15px; font-size:20px; top:20px; }
   .sub { left:15px; font-size:22px; top:60px; }
   .date { right:15px; top:20px; padding:4px 8px; }
-  
-  .card{ width:150px; }
-  .card.one{ left:10px; top:170px; }
-  .card.two{ left:120px; top:200px; }
-  .card.three{ left:230px; top:170px; }
-  
+
+  .card{
+    width:130px;
+  }
+
   .card img{ height:120px; }
   .card p{ font-size:14px; }
 
@@ -169,7 +188,7 @@ body{
 
 <body>
 
-<div class="heading">this is for you</div>
+<div class="heading">Hai, this is for you</div>
 <div class="sub">my favourite person ❤️</div>
 
 <div class="date">
@@ -177,22 +196,22 @@ body{
   <div class="day">31 ✨</div>
 </div>
 
-<!-- CARD 1 -->
-<div class="card one">
-  <img src="images/photo-right.jpg">
-  <p>my safest place.</p>
-</div>
+<!-- CENTERED CARDS ON MOBILE -->
+<div class="cards-wrapper">
+  <div class="card one">
+    <img src="images/photo-right.jpg">
+    <p>my safest place.</p>
+  </div>
 
-<!-- CARD 2 -->
-<div class="card two">
-  <img src="images/photo-middle.jpg">
-  <p>still the cutest.</p>
-</div>
+  <div class="card two">
+    <img src="images/photo-middle.jpg">
+    <p>still the cutest.</p>
+  </div>
 
-<!-- CARD 3 -->
-<div class="card three">
-  <img src="images/photo-left.jpg">
-  <p>us, always.</p>
+  <div class="card three">
+    <img src="images/photo-left.jpg">
+    <p>us, always.</p>
+  </div>
 </div>
 
 <!-- NEXT BUTTON -->
@@ -200,4 +219,5 @@ body{
 
 </body>
 </html>
+
 
